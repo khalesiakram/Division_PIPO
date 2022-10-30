@@ -1,0 +1,26 @@
+ANF of S5_1
+*************************************************
+Sage Code:
+------------------------------------------------
+from sage.crypto.sbox import SBox
+
+S = SBox([0,9,23,28,5,26,19,14,8,1,29,22,15,18,27,4,20,31,3,10,17,12,7,24,25,6,13,16,30,21,11,2])
+f0 = S.component_function(1)
+f1 = S.component_function(2)
+f2 = S.component_function(4)
+f3 = S.component_function(8)
+f4 = S.component_function(16)
+
+print ( "y0 = ", f0.algebraic_normal_form())
+print ( "y1 = ", f1.algebraic_normal_form())
+print ( "y2 = ", f2.algebraic_normal_form())
+print ( "y3 = ", f3.algebraic_normal_form())
+print ( "y4 = ", f4.algebraic_normal_form())
+
+***********************************************
+Output of Sage:
+y0 =  x0 + x1*x2 + x1*x3*x4 + x1 + x2 + x3*x4
+y1 =  x0*x1 + x0*x2*x3 + x0*x2 + x0*x4 + x1*x3 + x1 + x2*x3
+y2 =  x0*x2 + x0*x3*x4 + x1 + x2 + x3*x4 + x4
+y3 =  x0 + x3
+y4 =  x0*x2 + x0*x3*x4 + x1 + x4

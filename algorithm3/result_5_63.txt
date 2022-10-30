@@ -1,0 +1,6 @@
+
+Integral Distinguisher Found!
+
+Those are the coordinates set to zero: 
+
+Time used = 309.75375747680664

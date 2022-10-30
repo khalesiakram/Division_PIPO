@@ -1,0 +1,22 @@
+ANF of S3:
+************************************************
+Sage Code:
+------------------------------------------------
+from sage.crypto.sbox import SBox
+
+S = SBox([4,7,5,0,3,2,1,6])
+f0 = S.component_function(1)
+f1 = S.component_function(2)
+f2 = S.component_function(4)
+
+
+print ( "y0 = ", f0.algebraic_normal_form())
+print ( "y1 = ", f1.algebraic_normal_form())
+print ( "y2 = ", f2.algebraic_normal_form())
+
+************************************************
+Output of Sage:
+
+y0 =  x0 + x1*x2 + x1 + x2
+y1 =  x0*x1 + x0*x2 + x0 + x1*x2 + x2
+y2 =  x0*x1 + x2 + 1
